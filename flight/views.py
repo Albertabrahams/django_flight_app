@@ -41,9 +41,9 @@ class ReservationView(viewsets.ModelViewSet):
     serializer_class = ReservationSerializer
     
     
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        # queryset = Reservation.objects.all()
-        if self.request.user.is_staff:
-            return queryset
-        return queryset.filter(user=self.request.user)
+    # def get_queryset(self):
+    #     queryset = super().get_queryset()
+    #     # queryset = Reservation.objects.all()
+    #     if self.request.user.is_staff:
+    #         return queryset
+    #     return queryset.filter(user=self.request.user)
