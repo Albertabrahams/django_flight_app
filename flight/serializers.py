@@ -40,8 +40,7 @@ class ReservationSerializer(serializers.ModelSerializer):
             "user_id",
             "passenger"
         )
-        
-        
+             
     def create(self, validated_data):
         passenger_data = validated_data.pop('passenger')
         print(validated_data)
